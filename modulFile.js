@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const filePath = path.resolve(__dirname, "data.json");
-const file = readFile(filePath);
-let content = file && JSON.parse(file) || [];
+const filePath = path.resolve(__dirname, "file.json");
+const fileContent= readFile(filePath);
+let products = fileContent && JSON.parse(fileContent) || [];
 
 function readFile(filePath) {
     if (fs.existsSync(filePath)) {
@@ -10,12 +10,13 @@ function readFile(filePath) {
     }
 }
 
-function jsonContent(content) {
+function writeFile(content) {
     const jsonContent = JSON.stringify(content, null, 2);  //записываем в файл
     fs.writeFileSync(filePath, jsonContent);
 }
 
 module.exports = {
-    jsonContent,
-    content
+    writeFile,
+    products
 }
+
