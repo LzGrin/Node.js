@@ -1,9 +1,5 @@
 const readLine = require('readline');
-// let rl;
-
 const {products, writeFile} = require('./modulFile');
-
-// function createInterface() {
 const rl = readLine.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -14,13 +10,12 @@ module.exports = {
 }
 
 const {editProduct} = require('./edit');
-// };
 
 function askQuestion() {
     rl.question('Choose action: 0- exit, 1-view products, 2-add product, 3-remove product, 4-\n', (answer) => {
         manageAnswer(answer);
     });
-};
+}
 
 function manageAnswer(answer) {
     switch (answer) {
@@ -67,7 +62,7 @@ function manageAnswer(answer) {
                         products.splice(index, 1);
                         writeFile(products);
                     }
-                    ;
+
 
                 });
                 askQuestion();
@@ -81,4 +76,4 @@ function manageAnswer(answer) {
         default:
             console.log('HGR');
     }
-};
+}
