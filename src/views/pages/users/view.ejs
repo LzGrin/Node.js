@@ -5,17 +5,19 @@
         <table>
             <thead>
                 <tr>
-                    <th>Пользователь</th>
-                    <th>Логин</th>
-                    <th>Почта</th>
+                    <th>Название</th>
+                    <th>Цена</th>
+                    <th>Артикул</th>
+                    <th>Количество</th>
                 </tr>
             </thead>
             <tbody>
                 <% users.forEach(user => { %>
                     <tr>
                         <td><%= user.name %></td>
-                        <td><%= user.login %></td>
-                        <td><%= user.email %></td>
+                        <td><%= user.price %></td>
+                        <td><%= user.articul %></td>
+                        <td><%= user.count %></td>
                     </tr>
                 <% }); %>
             </tbody>
