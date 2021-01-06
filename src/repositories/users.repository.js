@@ -11,21 +11,25 @@ const usersRepository = {
     },
 
     async get(id) {
-        const users = await this.getAll();
-        return users.find(user => user.id === id);
+        const products = await this.getAll();
+        return products.find(user => user.id === id);
     },
 
-    async add(user) {
-        const users = await this.getAll();
-        const newUser = {
+    async add(product) {
+        const products = await this.getAll();
+        const newProduct = {
             id: uuid.v1(),
-            ...user
+            ...products
         };
-        users.push(newUser);
+        products.push(newProduct);
 
-        await writeJsonFile(FILE_PATH, users);
+        await writeJsonFile(FILE_PATH, products);
 
-        return newUser;
+        return newProduct;
+    },
+    async put(product) {
+        const products = await this.getAll();
+
     }
 };
 

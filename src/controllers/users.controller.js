@@ -17,4 +17,19 @@ router.post('/add', async (request, response) => {
     response.redirect('/users');
 });
 
+router.patch('/add', async (request, response) => {
+    await usersRepository.add(request.body);
+    response.redirect('/users');
+});
+
+router.put('/add', async (request, response) => {
+    await  usersRepository.add(request.body);
+    response.redirect('/users');
+});
+
+router.delete('/add', async  (request, response) => {
+    await  usersRepository.add(request.body);
+    response.redirect('/users');
+});
+
 module.exports = router;
