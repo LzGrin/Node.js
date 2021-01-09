@@ -1,13 +1,19 @@
+<%- include('../../fragments/header.ejs'); %>
+
 <nav>
     <ul>
         <li>
-            <a href="/users">Просмотр каталога</a>
+            <a href="/products">Просмотр каталога</a>
         </li>
         <li>
-            <a href="/users/add">Добавленить товар</a>
+            <a href="/products/add">Добавленить товар</a>
         </li>
         <li>
-            <a href="/users/add">Изменить товар</a>
+            <a href="/products/add">Изменить товар</a>
         </li>
+        <button onclick="deleteProduct('https://run.mocky.io/v3/439f2f1e-c0c3-4790-b1e1-41211e1b2c9e')" name="delete">Удалить</button>
+        <div class="text"></div>
     </ul>
 </nav>
+
+<%- include('../../fragments/footer.ejs'); %>
