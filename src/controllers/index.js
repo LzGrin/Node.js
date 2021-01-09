@@ -1,12 +1,12 @@
 const { Router } = require('express');
 const homeController = require('./home.controller');
-const usersController = require('./users.controller');
+const usersController = require('./products.controller');
 const apiControllers = require('./api');
 
 const router = new Router();
 
 router.use('/', homeController);
-router.use('/users', usersController);
+router.use('/products', usersController);
 router.use('/api', apiControllers);
 
 module.exports = router;

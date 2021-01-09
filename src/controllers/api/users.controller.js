@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const usersRepository = require('../../repositories/users.repository');
+const usersRepository = require('../../repositories/products.repository');
 
 const router = new Router();
 
